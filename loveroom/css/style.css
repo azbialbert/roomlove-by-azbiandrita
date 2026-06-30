@@ -1,0 +1,1138 @@
+/* ========================================
+   OUR CHAPTER
+   Premium Apple Inspired UI
+======================================== */
+
+/* Google Fonts digunakan dari index.html */
+
+/* =========================
+   ROOT
+========================= */
+
+:root{
+
+    --bg:#09090B;
+    --surface:#111113;
+    --card:#18181B;
+
+    --white:#FFFFFF;
+    --text:#E4E4E7;
+    --muted:#A1A1AA;
+
+    --accent:#8B7FFF;
+    --accent2:#5B7CFA;
+
+    --border:rgba(255,255,255,.08);
+
+    --radius:24px;
+
+    --shadow:
+    0 10px 40px rgba(0,0,0,.35);
+
+    --transition:.45s ease;
+
+}
+
+/* =========================
+   RESET
+========================= */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Plus Jakarta Sans",sans-serif;
+    overflow-x:hidden;
+
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1,h2,h3,h4{
+
+    font-family:"Manrope",sans-serif;
+    color:white;
+    font-weight:700;
+
+}
+
+h1{
+
+    font-size:clamp(3rem,8vw,7rem);
+    line-height:1;
+    letter-spacing:-3px;
+
+}
+
+h2{
+
+    font-size:clamp(2rem,5vw,4rem);
+
+}
+
+p{
+
+    color:var(--muted);
+    font-size:18px;
+    line-height:1.9;
+
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+section{
+
+    width:100%;
+    padding:120px 8%;
+
+}
+
+.container{
+
+    max-width:1200px;
+    margin:auto;
+
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.background-blur{
+
+    position:fixed;
+    width:700px;
+    height:700px;
+
+    background:#5B7CFA;
+
+    opacity:.10;
+
+    filter:blur(220px);
+
+    border-radius:50%;
+
+    top:-200px;
+    right:-150px;
+
+    z-index:-2;
+
+}
+
+.background-noise{
+
+    position:fixed;
+    inset:0;
+
+    opacity:.02;
+
+    background-image:
+    radial-gradient(circle,#fff 1px,transparent 1px);
+
+    background-size:22px 22px;
+
+    z-index:-1;
+
+}
+
+/* =========================
+   LOADER
+========================= */
+
+.loader{
+
+    position:fixed;
+    inset:0;
+
+    background:#09090B;
+
+    display:none;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.loader-logo{
+
+    font-size:32px;
+    font-family:"Manrope";
+    font-weight:800;
+    letter-spacing:12px;
+    color:white;
+
+}
+
+.loader-line{
+
+    width:220px;
+    height:2px;
+
+    background:#2B2B30;
+
+    margin-top:25px;
+
+    overflow:hidden;
+
+    border-radius:999px;
+
+}
+
+.loader-line::before{
+
+    content:"";
+
+    display:block;
+
+    width:50%;
+    height:100%;
+
+    background:white;
+
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.progress-bar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:0;
+
+    height:3px;
+
+    background:linear-gradient(
+        90deg,
+        #8B7FFF,
+        #5B7CFA
+    );
+
+    z-index:999;
+
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+
+    position:fixed;
+
+    top:18px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:min(92%,1200px);
+
+    padding:18px 35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:999px;
+
+    z-index:900;
+
+}
+
+.logo{
+
+    color:white;
+
+    font-weight:700;
+
+    font-family:"Manrope";
+
+    letter-spacing:2px;
+
+}
+
+.navbar ul{
+
+    display:flex;
+
+    gap:40px;
+
+    list-style:none;
+
+}
+
+.navbar a{
+
+    color:#CFCFD4;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.navbar a:hover{
+
+    color:white;
+
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+.hero-content{
+
+    max-width:900px;
+
+}
+
+.hero-subtitle{
+
+    display:inline-block;
+
+    color:#8B7FFF;
+
+    letter-spacing:5px;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+
+}
+
+.hero p{
+
+    max-width:680px;
+
+    margin:35px auto;
+
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn-primary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px 38px;
+
+    background:white;
+
+    color:#09090B;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 15px 45px rgba(255,255,255,.18);
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    padding:60px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.06);
+
+}
+
+footer p{
+
+    font-size:15px;
+
+}
+
+/* ===========================
+   CURSOR GLOW
+=========================== */
+
+.cursor-glow{
+
+    position:fixed;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        rgba(139,127,255,.18),
+
+        transparent 70%
+
+    );
+
+    pointer-events:none;
+
+    transform:
+
+    translate(-50%,-50%);
+
+    z-index:-1;
+
+    transition:
+
+    left .08s linear,
+
+    top .08s linear;
+
+}
+
+/* ===========================
+   MUSIC BUTTON
+=========================== */
+
+#musicButton{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    z-index:999;
+
+}
+
+#musicButton:hover{
+
+    transform:scale(1.08);
+
+    background:#8B7FFF;
+
+}
+
+/*==================================
+LIGHTBOX
+==================================*/
+
+#lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.92);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.4s;
+
+    z-index:99999;
+
+}
+
+#lightbox.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+#lightbox img{
+
+    width:80%;
+
+    max-width:1100px;
+
+    border-radius:22px;
+
+    box-shadow:
+
+    0 30px 100px rgba(0,0,0,.6);
+
+}
+
+#closeLightbox{
+
+    position:absolute;
+
+    top:35px;
+
+    right:45px;
+
+    color:white;
+
+    font-size:45px;
+
+    cursor:pointer;
+
+}
+
+/*====================================
+AURORA
+====================================*/
+
+.aurora{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:-3;
+
+}
+
+.aurora span{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(140px);
+
+    opacity:.16;
+
+}
+
+.aurora-1{
+
+    width:500px;
+
+    height:500px;
+
+    background:#7C5CFF;
+
+    top:-150px;
+
+    left:-150px;
+
+}
+
+.aurora-2{
+
+    width:600px;
+
+    height:600px;
+
+    background:#4F83FF;
+
+    bottom:-220px;
+
+    right:-180px;
+
+}
+
+.aurora-3{
+
+    width:420px;
+
+    height:420px;
+
+    background:#B084FF;
+
+    top:40%;
+
+    left:45%;
+
+}
+
+/* =====================================
+ABOUT
+===================================== */
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:90px;
+
+    align-items:center;
+
+}
+
+.section-tag{
+
+    color:#8B7FFF;
+
+    letter-spacing:5px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    display:inline-block;
+
+    margin-bottom:20px;
+
+}
+
+.about-text h2{
+
+    margin-bottom:35px;
+
+}
+
+.about-text p{
+
+    margin-bottom:22px;
+
+}
+
+.about-image{
+
+    position:relative;
+
+}
+
+.about-image img{
+
+    width:100%;
+
+    border-radius:30px;
+
+    box-shadow:
+
+    0 40px 100px rgba(0,0,0,.45);
+
+    transition:.5s;
+
+}
+
+.about-image img:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* =====================================
+TIMELINE
+===================================== */
+
+.timeline{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+    margin-top:70px;
+
+}
+
+.timeline-item{
+
+    background:#111113;
+
+    padding:45px;
+
+    border-radius:28px;
+
+    border:1px solid rgba(255,255,255,.06);
+
+}
+
+.timeline-item h3{
+
+    margin-bottom:20px;
+
+}
+
+/* =====================================
+GALLERY
+===================================== */
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.photo{
+
+    width:100%;
+
+    aspect-ratio:1;
+
+    object-fit:cover;
+
+    border-radius:28px;
+
+    cursor:pointer;
+
+}
+
+/*====================================
+LETTER
+====================================*/
+
+.letter-card{
+
+    max-width:900px;
+
+    margin:60px auto 0;
+
+    padding:70px;
+
+    border-radius:36px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 30px 90px rgba(0,0,0,.35);
+
+}
+
+.letter-card h2{
+
+    margin-bottom:30px;
+
+}
+
+.letter-card p{
+
+    margin-bottom:24px;
+
+}
+
+.signature{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    color:#8B7FFF;
+
+    font-weight:700;
+
+}
+
+/*====================================
+PLAYLIST
+====================================*/
+
+.playlist-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+    margin-top:60px;
+
+}
+
+.song{
+
+    padding:35px;
+
+    border-radius:28px;
+
+    background:#111113;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    transition:.4s;
+
+}
+
+.song:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.song h3{
+
+    margin-bottom:15px;
+
+}
+
+/*====================================
+ENDING
+====================================*/
+
+.ending{
+
+    text-align:center;
+
+    max-width:900px;
+
+}
+
+.ending h2{
+
+    font-size:clamp(3rem,8vw,6rem);
+
+    margin-bottom:30px;
+
+}
+
+.ending p{
+
+    max-width:700px;
+
+    margin:0 auto 45px;
+
+}
+
+/*====================================
+MOBILE MENU
+====================================*/
+
+.menu-toggle{
+
+    display:none;
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(15px);
+
+    transition:.3s;
+
+}
+
+.menu-toggle:hover{
+
+    background:#8B7FFF;
+
+}
+
+/* =====================================
+   LOCK SCREEN
+===================================== */
+
+#lockScreen{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(9,9,11,.88);
+
+    backdrop-filter:blur(35px);
+
+    z-index:10000;
+
+}
+
+.lock-card{
+
+    width:min(92%,520px);
+
+    padding:60px;
+
+    text-align:center;
+
+    border-radius:36px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(30px);
+
+    box-shadow:
+    0 30px 90px rgba(0,0,0,.45);
+
+}
+
+.lock-subtitle{
+
+    display:block;
+
+    color:#8B7FFF;
+
+    letter-spacing:6px;
+
+    font-size:13px;
+
+    margin-bottom:20px;
+
+}
+
+.lock-card h1{
+
+    font-size:48px;
+
+    letter-spacing:-2px;
+
+    margin-bottom:20px;
+
+}
+
+.lock-card p{
+
+    margin-bottom:35px;
+
+}
+
+.password-box{
+
+    margin-bottom:25px;
+
+}
+
+#passwordInput{
+
+    width:100%;
+
+    padding:18px 24px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.06);
+
+    color:white;
+
+    font-size:17px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+#passwordInput::placeholder{
+
+    color:#8F8F95;
+
+}
+
+#passwordInput:focus{
+
+    background:rgba(255,255,255,.10);
+
+    box-shadow:
+    0 0 0 2px rgba(139,127,255,.35);
+
+}
+
+#unlockButton{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    color:#09090B;
+
+    background:white;
+
+    transition:.35s;
+
+}
+
+#unlockButton:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 20px 45px rgba(255,255,255,.18);
+
+}
+
+.lock-footer{
+
+    display:block;
+
+    margin-top:25px;
+
+    color:#8A8A90;
+
+    font-size:14px;
+
+}
+
+/* =====================================
+   PASSWORD ERROR
+===================================== */
+
+#passwordError{
+
+    display:none;
+
+    margin-top:18px;
+
+    color:#ff6b6b;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.lock-card.shake{
+
+    animation:shake .4s;
+
+}
+
+@keyframes shake{
+
+    0%{
+        transform:translateX(0);
+    }
+
+    25%{
+        transform:translateX(-8px);
+    }
+
+    50%{
+        transform:translateX(8px);
+    }
+
+    75%{
+        transform:translateX(-6px);
+    }
+
+    100%{
+        transform:translateX(0);
+    }
+
+}

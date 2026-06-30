@@ -1,0 +1,447 @@
+/* =====================================
+   OUR CHAPTER
+   Premium Animation
+======================================*/
+
+/* =========================
+   Loader
+========================= */
+
+@keyframes loaderFade{
+
+    0%{
+        opacity:1;
+        visibility:visible;
+    }
+
+    90%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        visibility:hidden;
+    }
+
+}
+
+.loader.hide{
+
+    animation:loaderFade .8s forwards;
+
+}
+
+/* =========================
+   Loader Line
+========================= */
+
+@keyframes loading{
+
+    0%{
+        transform:translateX(-100%);
+    }
+
+    100%{
+        transform:translateX(220%);
+    }
+
+}
+
+.loader-line::before{
+
+    animation:loading 1.6s infinite ease;
+
+}
+
+/* =========================
+   Floating Background
+========================= */
+
+@keyframes floating{
+
+    0%{
+
+        transform:
+        translateY(0px)
+        translateX(0px);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(-40px)
+        translateX(30px);
+
+    }
+
+    100%{
+
+        transform:
+        translateY(0px)
+        translateX(0px);
+
+    }
+
+}
+
+.background-blur{
+
+    animation:
+    floating 14s ease-in-out infinite;
+
+}
+
+/* =========================
+   Fade Up
+========================= */
+
+.fade-up{
+
+    opacity:0;
+
+    transform:
+    translateY(60px);
+
+    transition:
+
+    opacity .9s ease,
+
+    transform .9s ease;
+
+}
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* =========================
+   Fade Left
+========================= */
+
+.fade-left{
+
+    opacity:0;
+
+    transform:translateX(-70px);
+
+    transition:.9s;
+
+}
+
+.fade-left.show{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+/* =========================
+   Fade Right
+========================= */
+
+.fade-right{
+
+    opacity:0;
+
+    transform:translateX(70px);
+
+    transition:.9s;
+
+}
+
+.fade-right.show{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+/* =========================
+   Scale
+========================= */
+
+.scale{
+
+    opacity:0;
+
+    transform:scale(.92);
+
+    transition:.8s;
+
+}
+
+.scale.show{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+/* =========================
+   Hero
+========================= */
+
+.hero-content{
+
+    animation:
+    heroFade 1.5s ease;
+
+}
+
+@keyframes heroFade{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+/* =========================
+   Button Hover
+========================= */
+
+.btn-primary{
+
+    transition:
+
+    transform .35s,
+
+    box-shadow .35s,
+
+    background .35s;
+
+}
+
+.btn-primary:hover{
+
+    transform:
+    translateY(-6px);
+
+    box-shadow:
+    0 20px 60px rgba(255,255,255,.18);
+
+}
+
+/* =========================
+   Navbar
+========================= */
+
+.navbar{
+
+    transition:
+
+    transform .45s,
+
+    background .45s,
+
+    border .45s;
+
+}
+
+/* =========================
+   Link Hover
+========================= */
+
+.navbar a{
+
+    position:relative;
+
+}
+
+.navbar a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    border-radius:99px;
+
+    background:white;
+
+    transition:.3s;
+
+}
+
+.navbar a:hover::after{
+
+    width:100%;
+
+}
+
+/* =========================
+   Gallery Hover
+========================= */
+
+.photo{
+
+    transition:
+
+    transform .45s,
+
+    box-shadow .45s;
+
+}
+
+.photo:hover{
+
+    transform:
+    translateY(-10px);
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.45);
+
+}
+
+/* =========================
+   Card Hover
+========================= */
+
+.timeline-item{
+
+    transition:
+
+    transform .4s,
+
+    background .4s;
+
+}
+
+.timeline-item:hover{
+
+    transform:
+    translateY(-8px);
+
+}
+
+/* =========================
+   Glow Pulse
+========================= */
+
+@keyframes glow{
+
+    0%{
+
+        opacity:.10;
+
+    }
+
+    50%{
+
+        opacity:.18;
+
+    }
+
+    100%{
+
+        opacity:.10;
+
+    }
+
+}
+
+.background-blur{
+
+    animation:
+
+    floating 14s ease-in-out infinite,
+
+    glow 6s ease infinite;
+
+}
+
+/* ====================================
+   Aurora Animation
+==================================== */
+
+@keyframes auroraMove{
+
+    0%{
+
+        transform:
+        translate(0,0)
+        scale(1);
+
+    }
+
+    25%{
+
+        transform:
+        translate(40px,-60px)
+        scale(1.1);
+
+    }
+
+    50%{
+
+        transform:
+        translate(-30px,40px)
+        scale(.95);
+
+    }
+
+    75%{
+
+        transform:
+        translate(60px,30px)
+        scale(1.05);
+
+    }
+
+    100%{
+
+        transform:
+        translate(0,0)
+        scale(1);
+
+    }
+
+}
+
+.aurora span{
+
+    animation:
+    auroraMove 18s ease-in-out infinite;
+
+}
+
+.aurora-2{
+
+    animation-delay:4s;
+
+}
+
+.aurora-3{
+
+    animation-delay:8s;
+
+}
